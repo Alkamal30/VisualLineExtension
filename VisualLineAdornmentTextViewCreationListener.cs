@@ -9,14 +9,14 @@ namespace VisualLineExtension
     [TextViewRole(PredefinedTextViewRoles.Document)]
     internal sealed class VisualLineAdornmentTextViewCreationListener : IWpfTextViewCreationListener
     {
-#pragma warning disable IDE0051
+#pragma warning disable CS0169
 
         [Export(typeof(AdornmentLayerDefinition))]
         [Name(nameof(VisualLineAdornment))]
         [Order(Before = PredefinedAdornmentLayers.Text)]
         private readonly AdornmentLayerDefinition editorAdornmentLayer;
 
-#pragma warning restore IDE0051
+#pragma warning restore CS0169
 
         public void TextViewCreated(IWpfTextView textView)
         {
